@@ -2624,10 +2624,13 @@
         </div>
         <script>
           function goBack() {
-            if (document.referrer && window.history.length > 1) {
-              window.history.back();
+            const referrer = document.referrer;
+            const isFromFramer = referrer.includes("framer.ai") || referrer.includes("framer.website");
+        
+            if (isFromFramer && history.length > 1) {
+              history.back(); // quay lại đúng trang Framer trước đó
             } else {
-              window.location.href = "https://andyhoanghieu.framer.ai";
+              window.location.href = "https://andyhoanghieu.framer.ai"; // fallback nếu người dùng nhập thẳng GitHub.io
             }
           }
         </script>
