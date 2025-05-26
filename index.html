@@ -2623,16 +2623,18 @@
             <!--/$-->
         </div>
         <script>
-          function goBack() {
-            const referrer = document.referrer;
-            const isFromFramer = referrer.includes("framer.ai") || referrer.includes("framer.website");
-        
-            if (isFromFramer && history.length > 1) {
-              history.back(); // quay lại đúng trang Framer trước đó
-            } else {
-              window.location.href = "https://andyhoanghieu.framer.ai"; // fallback nếu người dùng nhập thẳng GitHub.io
-            }
-          }
+            function goBack() {
+                const referrer = document.referrer;
+                const isFromFramer = referrer.includes("framer.ai") || referrer.includes("framer.website");
+            
+                if (isFromFramer) {
+                  // Redirect trực tiếp về lại trang trước đó
+                  window.location.href = referrer;
+                } else {
+                  // Fallback về homepage nếu không có referrer
+                  window.location.href = "https://andyhoanghieu.framer.ai";
+                }
+              }
         </script>
         <script>
             ( () => {
