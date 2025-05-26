@@ -2628,16 +2628,14 @@
             <!--/$-->
         </div>
         <script>
-            function goBack() {
+              function goBack() {
                 const referrer = document.referrer;
                 const isFromFramer = referrer.includes("framer.ai") || referrer.includes("framer.website");
             
                 if (isFromFramer) {
-                  // Redirect trực tiếp về lại trang trước đó
-                  window.location.href = referrer;
+                  window.location.replace(referrer); // dùng replace để tránh thêm vào history
                 } else {
-                  // Fallback về homepage nếu không có referrer
-                  window.location.href = "https://andyhoanghieu.framer.ai";
+                  window.location.href = "https://andyhoanghieu.framer.ai"; // fallback
                 }
               }
         </script>
