@@ -2587,18 +2587,31 @@
                         </div>
                         <!--$-->
                         <div class="framer-kpl4xw-container">
-                            <!--$-->
-                            <a class="framer-wHu8V framer-fBL0P framer-1ntsxvj framer-v-1ntsxvj framer-7b55u6" data-framer-name="Primary" data-highlight="true" style="--9e3ze9:0.47422285992186514px 0.47422285992186514px 0.6706524000888582px -0.2px rgba(0, 0, 0, 0.05), 1.2914347811369224px 1.2914347811369224px 1.8263645824041657px -0.4px rgba(0, 0, 0, 0.06), 2.8355233674636113px 2.8355233674636113px 4.010035602692868px -0.6px rgba(0, 0, 0, 0.08), 6.294214453822934px 6.294214453822934px 8.901363445081158px -0.8px rgba(0, 0, 0, 0.11), 16px 16px 22.627416997969522px -1px rgba(0, 0, 0, 0.2);--border-bottom-width:0px;--border-color:rgba(0, 0, 0, 0);--border-left-width:0px;--border-right-width:0px;--border-style:solid;--border-top-width:0px;background-color:var(--token-404da5a0-b6b9-407a-b3f1-b45132783493, rgb(17, 17, 17));border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;box-shadow:var(--9e3ze9);height:100%" href="./" tabindex="0">
-                                <div class="framer-1bigmpt" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none" data-framer-component-type="RichTextContainer">
-                                    <p class="framer-text framer-styles-preset-1ohkknb" data-styles-preset="jOszOkYvc">Back to Home</p>
-                                </div>
-                                <div class="framer-a6y3l5-container">
-                                    <!--$-->
-                                    <div style="display:contents"></div>
-                                    <!--/$-->
-                                </div>
-                            </a>
-                            <!--/$-->
+                          <button onclick="goBack()"
+                            class="framer-wHu8V framer-fBL0P framer-1ntsxvj framer-v-1ntsxvj framer-7b55u6"
+                            style="
+                              all: unset;
+                              display: flex;
+                              align-items: center;
+                              gap: 12px;
+                              padding: 12px 24px;
+                              background-color: rgb(17, 17, 17);
+                              color: white;
+                              border-radius: 16px;
+                              box-shadow: var(--9e3ze9);
+                              cursor: pointer;
+                            ">
+                            <div class="framer-1bigmpt" style="display: flex; flex-direction: column;">
+                              <p class="framer-text framer-styles-preset-1ohkknb">⬅ Quay lại</p>
+                            </div>
+                            <div class="framer-a6y3l5-container">
+                              <div style="display: contents;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="white" style="width: 20px; height: 20px; fill: white;">
+                                  <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
                         </div>
                         <!--/$-->
                     </main>
@@ -2609,6 +2622,15 @@
             <div id="template-overlay"></div>
             <!--/$-->
         </div>
+        <script>
+          function goBack() {
+            if (document.referrer && window.history.length > 1) {
+              window.history.back();
+            } else {
+              window.location.href = "https://andyhoanghieu.framer.ai";
+            }
+          }
+        </script>
         <script>
             ( () => {
                 function u() {
